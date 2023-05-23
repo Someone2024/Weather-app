@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  color: #f3f3f3;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+header {
+  height: 5.5rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 4%;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+input[type="text"] {
+  width: 240px;
+  height: 44px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 15%;
+  font-size: 1rem;
+  font-stretch: 100%;
+  border-radius: 0.5rem;
+  text-align: left;
+  color: white;
+  opacity: 0.9;
+}
+
+.condition {
+  font-size: 22px;
+  letter-spacing: 1px;
+  padding-left: 3px;
+}
+
+.location {
+  font-size: 40px;
+  line-height: 35px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.temperature {
+  font-size: 150px;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+}
+
+.weather-details{
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
