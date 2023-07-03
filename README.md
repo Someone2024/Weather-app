@@ -17,7 +17,7 @@ Weather details: The app displays the current weather conditions, including temp
 ## Usage
 To use the City Weather App, follow these steps:
 
-1. Open the City Weather App in your web browser.
+1. Go to https://someone2024.github.io/Weather-app/
 2. Enter the name of a city in the search input field.
 3. hit Enter.
 4. The app will fetch and display the current weather information for the specified city.
