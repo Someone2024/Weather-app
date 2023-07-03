@@ -12,7 +12,6 @@
 <body>
     <header>
         <form action="" id="city-form">
-            <input style="display: none;" type="text" placeholder="Search City" name="city" id="changed" class="city">
             <input type="text" placeholder="Search City" name="city" id="input-city" class="city">
         </form>
     </header>
@@ -21,12 +20,15 @@
     <div class="weather-info">
         <div class="condition"></div>
         <h1 class="location"></h1>
-        <span class="temperature"></span>
 
         <div class="weather-details">
-            <p class="feels-like"></p>
-            <p class="humidity"></p>
-            <p class="wind"></p>
+            <span class="temperature"></span>
+            <div class="line"></div>
+            <div class="">
+                <p class="inf feels-like"></p>
+                <p class="inf humidity"></p>
+                <p class="inf wind"></p>
+            </div>
         </div>
     </div>
 </body>
