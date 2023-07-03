@@ -20,9 +20,19 @@ async function getWeather(city){
     return weather
 }
 
+window.onload = getWeather("london").then(result => {
+    condition.textContent = result.current.condition.text;
+    city.textContent = `${result.location.name}, ${result.location.country}`
+    temperature.textContent = result.current.temp_c + "°C"
+
+    feelsLike.textContent = "Feels Like: " + result.current.feelslike_c + "°C"
+    humidity.textContent = "Humidiy: " + result.current.humidity + "%"
+    wind.textContent = "Wind: " + result.current.wind_kph + "kph"
+})
+
 inputCity.addEventListener("keydown", function(event) {
-    event.preventDefault()
     if (event.key === "Enter") {
+        event.preventDefault()
         getWeather(inputCity.value).then(result => {
             condition.textContent = result.current.condition.text;
             city.textContent = `${result.location.name}, ${result.location.country}`
