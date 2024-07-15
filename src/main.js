@@ -32,14 +32,16 @@ async function GetBgImage(searchTerm){
     return imageResponse;
 }
 
-GetBgImage("ballons").then(result => {
-    console.log(result.results[0].urls.raw)
-})
-
 window.onload = getWeather("london").then(result => {
     condition.textContent = result.current.condition.text;
     city.textContent = `${result.location.name}, ${result.location.country}`
     temperature.textContent = result.current.temp_c + "°C"
+
+    GetBgImage(result.current.condition.text).then(result => {
+        console.log(result.results[0].urls.raw)
+        document.body.style.backgroundImage = `url(${result.results[0].urls.raw})`;
+
+    })
 
     feelsLike.textContent = "Feels Like: " + result.current.feelslike_c + "°C"
     humidity.textContent = "Humidiy: " + result.current.humidity + "%"
@@ -53,6 +55,10 @@ inputCity.addEventListener("keydown", function(event) {
             condition.textContent = result.current.condition.text;
             city.textContent = `${result.location.name}, ${result.location.country}`
             temperature.textContent = result.current.temp_c + "°C"
+
+            GetBgImage(result.current.condition.text).then(result => {
+                document.body.style.backgroundImage = `url(${result.results[0].urls.raw})`;
+            })
     
             feelsLike.textContent = "Feels Like: " + result.current.feelslike_c + "°C"
             humidity.textContent = "Humidiy: " + result.current.humidity + "%"
